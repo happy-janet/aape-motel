@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book a Room – Aape Motel</title>
+  <link rel="stylesheet" href="./css/book-room.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Book a Room</h1>
+    <form action="/api/book-room" method="POST">
+      <input type="text" name="name" required placeholder="Your Name">
+      <input type="email" name="email" required placeholder="Your Email">
+      <input type="tel" name="phone" required placeholder="Phone Number">
+      
+      <select name="roomType" required>
+        <option value="">Select Room Type</option>
+        <option value="Single">Single</option>
+        <option value="Double">Double</option>
+        <option value="Suite">Premium</option>
+      </select>
+
+      <label>Check-in Date</label>
+      <input type="date" name="checkIn" required>
+
+      <label>Check-out Date</label>
+      <input type="date" name="checkOut" required>
+
+      <textarea name="specialRequests" placeholder="Special Requests (optional)"></textarea>
+      
+      <button type="submit">Book Now</button>
+    </form>
+    <div id="bookingSuccess" class="success-message" style="display: none; color: green;">
+      ✅ Your booking has been submitted!
+    </div>
+  </div>
+</body>
+</html>
