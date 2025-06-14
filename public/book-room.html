@@ -4,8 +4,89 @@
   <meta charset="UTF-8">
   <title>Book a Room – Aape Motel</title>
   <link rel="stylesheet" href="./css/book-room.css">
+  <style>
+    /* Basic styling for header and footer */
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(./images/aape7.jpg);
+  background-size: cover;         /* Resize the image to cover the entire background */
+  background-position: center;    /* Center the image */
+  background-repeat: no-repeat;   /* Prevent the image from repeating */
+  background-attachment: fixed;   /* Make the background stay fixed on scroll */
+}
+
+
+    header {
+      background-color: #764ba2;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h2 {
+      margin: 0;
+    }
+
+    header button {
+      background-color: #ecf0f1;
+      color: #2c3e50;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    header button:hover {
+      background-color: #bdc3c7;
+    }
+
+    footer {
+      background-color: #764ba2;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    form input, form select, form textarea, form button {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    form button {
+      background-color: #764ba2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    form button:hover {
+      background-color: #764ba2;
+    }
+  </style>
 </head>
 <body>
+
+  <header>
+    <h2>Aape Motel</h2>
+    <button onclick="window.location.href='/'">🏠 Home</button>
+  </header>
+
   <div class="container">
     <h1>Book a Room</h1>
     <form action="/api/book-room" method="POST">
@@ -34,5 +115,10 @@
       ✅ Your booking has been submitted!
     </div>
   </div>
+
+  <footer>
+    &copy; 2025 Aape Motel. All rights reserved.
+  </footer>
+
 </body>
 </html>
