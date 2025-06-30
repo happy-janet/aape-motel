@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
-const sendEmail = require('./mailer'); // Make sure mailer.js is in the same directory
+const sendEmail = require('./mailer'); 
 
 const app = express();
 
